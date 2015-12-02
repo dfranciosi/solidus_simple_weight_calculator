@@ -1,8 +1,8 @@
-module SpreeSimpleWeightCalculator
+module SolidusSimpleWeightCalculator
   class Engine < Rails::Engine
     require 'spree/core'
     isolate_namespace Spree
-    engine_name 'spree_simple_weight_calculator'
+    engine_name 'solidus_simple_weight_calculator'
 
     config.autoload_paths += %W(#{config.root}/lib)
 

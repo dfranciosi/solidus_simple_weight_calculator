@@ -1,5 +1,5 @@
 it:
-  spree:
+  solidus:
     simple_weight: Peso Semplice
     costs_string: Tabella dei costi (peso massimo:costo, uno per riga)
     max_item_size: Dimensione massima accettata di un prodotto (lato più lungo)

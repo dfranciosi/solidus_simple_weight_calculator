@@ -15,6 +15,7 @@ ENV['RAILS_ENV'] = 'test'
 require File.expand_path('../dummy/config/environment.rb',  __FILE__)
 
 require 'rspec/rails'
+require 'rspec-activemodel-mocks'
 require 'database_cleaner'
 require 'ffaker'
 
@@ -28,8 +29,7 @@ require 'spree/testing_support/controller_requests'
 require 'spree/testing_support/authorization_helpers'
 require 'spree/testing_support/url_helpers'
 
-# Requires factories defined in lib/spree_simple_weight_calculator/factories.rb
-require 'spree_simple_weight_calculator/factories'
+require 'solidus_simple_weight_calculator/factories'
 
 RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
@@ -66,14 +66,12 @@ RSpec.configure do |config|
     DatabaseCleaner.clean_with :truncation
   end
 
-  # Before each spec check if it is a Javascript test and switch between using database transactions or not where necessary.
-  config.before :each do
-    DatabaseCleaner.strategy = example.metadata[:js] ? :truncation : :transaction
+  config.before(:each) do |example|
+    DatabaseCleaner.strategy = example.metadata[:js] ? :deletion : :transaction
     DatabaseCleaner.start
   end
 
-  # After each spec clean the database.
-  config.after :each do
+  config.after(:each) do
     DatabaseCleaner.clean
   end
 
