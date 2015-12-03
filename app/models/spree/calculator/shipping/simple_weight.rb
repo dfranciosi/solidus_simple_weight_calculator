@@ -8,7 +8,7 @@ module Spree
       preference :handling_max, :decimal, default: 0
 
       def self.description
-        Solidus.t(:simple_weight)
+        Spree.t(:simple_weight)
       end
 
       def self.register
