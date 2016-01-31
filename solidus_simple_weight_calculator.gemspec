@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'solidus_simple_weight_calculator'
-  s.version     = '1.0.0'
+  s.version     = '0.1.0'
   s.summary     = 'A Solidus shipping costs calculator based on total order weight'
   s.required_ruby_version = '>= 1.9.3'
 
