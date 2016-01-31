@@ -33,7 +33,7 @@ Usage
 
 Add to your Gemfile
 ```ruby
-gem 'solidus_simple_weight_calculator', github: 'dfranciosi/solidus_simple_weight_calculator', branch: 'master'
+gem 'solidus_simple_weight_calculator'
 ```
 
 Create a shipping method from the admin interface and choose the right calculator.
