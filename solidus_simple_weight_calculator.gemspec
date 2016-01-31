@@ -5,9 +5,10 @@ Gem::Specification.new do |s|
   s.version     = '0.1.0'
   s.summary     = 'A Solidus shipping costs calculator based on total order weight'
   s.required_ruby_version = '>= 1.9.3'
-
-  s.authors    = ['Alessandro Lepore', 'Diego Franciosi']
-  s.license   = 'MIT'
+  s.description = 'A Solidus shipping costs calculator based on total order weight'
+  s.authors     = ['Alessandro Lepore', 'Diego Franciosi']
+  s.email       = 'info@diegofranciosi.com'
+  s.license     = 'MIT'
 
   s.files       = `git ls-files`.split("\n")
   s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
